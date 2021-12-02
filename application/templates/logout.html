@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super () }}
+ <h2>Выход</h2>
+
+<form method="post">
+{{ form.hidden_tag() }}
+<div class="form-group col-3">
+    {{ form.logout(class_='btn btn-primary') }}</div>
+</form>
+
+{% endblock %}

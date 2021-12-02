@@ -5,8 +5,27 @@
     <title>WOOPPAY Test Work</title>
     <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 </head>
-<body style="color: #fff; background-color: #000;">
-{% block content -%}
+<body style="color: #fff; background-color: #232329;">
+
+<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Фильмы <span class="sr-only"></span></a>
+      <a class="nav-item nav-link" href="/register">Регистрация</a>
+      <a class="nav-item nav-link" href="/login">Вход</a>
+      <a class="nav-item nav-link disabled" href="#">Выход</a>
+    </div>
+  </div>
+</nav>
+{% block content %}
+
+
+
 {% endblock -%}
+    </div>
 </body>
 </html>

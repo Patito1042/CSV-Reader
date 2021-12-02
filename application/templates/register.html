@@ -2,7 +2,7 @@
 
 {% block content %}
 {{ super () }}
- <h2>Login</h2>
+<h2>Registration</h2>
 
 {% with messages = get_flashed_messages() %}
 {% if messages %}
@@ -14,15 +14,16 @@
 {% endif %}
 {% endwith %}
 
-<div class="form-group col-3">
+  <div class="form-group">
 <form method="post">
 {{ form.hidden_tag() }}
+<div class="form-group col-3">
 
 {{ form.login.label() }} {{ form.login(class_='form-control') }}
-{{ form.password.label }} {{ form.password(class_='form-control') }}<br>
+{{ form.password.label }} {{ form.password(class_='form-control') }}
+{{ form.password_repeat.label }} {{ form.password_repeat (class_='form-control') }} <br>
 {{ form.submit(class_='btn btn-primary') }}
-</form>
 </div>
-
-
+</form>
+  </div>
 {% endblock %}

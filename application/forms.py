@@ -12,6 +12,13 @@ class FilterForm(FlaskForm):
     submit = SubmitField('Поиск')
 
 class LoginForm(FlaskForm):
-    login = StringField('Login: ')
+    login = StringField('Логин: ')
     password = PasswordField('Пароль: ')
     submit = SubmitField('Войти')
+    logout = SubmitField('Выйти')
+
+class RegisterForm(FlaskForm):
+    login = StringField('Логин: ')
+    password = PasswordField('Пароль: ')
+    password_repeat = PasswordField('Повторите пароль: ')
+    submit = SubmitField('Регистрация')

@@ -11,7 +11,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = config.BaseConfig.SECRET_KEY
 db = SQLAlchemy(app)    # Присвоение модуля SQLAlchemy переменной
 
-manager = LoginManager()
+manager = LoginManager(app)
+
 
 from . import views
 from .utils import *
