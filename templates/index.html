@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super () }}
+
+<div class="container">
+<form method="post">
+{{ form.hidden_tag() }}
+
+{{ form.title.label() }} {{ form.title() }}
+{{ form.type.label }} {{ form.type() }}
+{{ form.year.label() }} {{ form.year() }}
+{{ form.rating.label() }} {{ form.rating() }}
+{{ form.genre.label() }} {{ form.genre() }}
+{{ form.submit() }}
+
+</form>
+ </div>
+<div class="container">
+  <div class="row">
+      <p>Результатов: {{search|length}}</p>
+{%- for line in search %}
+
+    <div class="col-lg-4 col-lg-push-4 col-md-6" style="margin-top: 20px;"><p>{{ line.title -}}</p>
+    <p>{{ line.type -}}</p>
+    <p>{{ line.release_year -}}</p>
+    <p>{{ line.rating -}}</p>
+    <p>{{ line.director -}}</p>
+    <p>{{ line.country -}}</p>
+
+        <hr>
+    </div>
+
+{% endfor %}
+
+  </div>
+</div>
+
+
+ {{ search.date_added }}
+
+{% endblock %}
