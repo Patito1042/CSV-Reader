@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 # Функция считывания CSV файла
 def csv_reader():
     with open('static/csv/netflix.csv') as file:
